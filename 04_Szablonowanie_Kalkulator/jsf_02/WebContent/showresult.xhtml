@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/templates/page-template.xhtml">
+
+	<ui:define name="title">Obliczona miesięczna rata</ui:define>
+
+	<ui:define name="pageContent">
+
+   <p:panel id="pnl2" header="Kalkulator" style="margin: 1em auto;" toggleable="true" closable="true" toggleSpeed="500"
+                closeSpeed="500" widgetVar="panel">
+	<h:messages />
+	Obliczona miesięczna rata wynosi #{kredytBB.result} zł
+	<h:form>
+		<p:commandButton value="Powrót" action="index" />
+	</h:form>
+	</p:panel>
+	<p:draggable for="pnl2"/>
+
+	</ui:define>
+
+</ui:composition>
+</html>
